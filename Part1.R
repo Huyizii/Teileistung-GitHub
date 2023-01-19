@@ -1,10 +1,11 @@
+ID <- sample(120000:220000,100,replace = TRUE,prob=NULL)
 #(1)
 Alter <- rnorm(n=100,m=25,sd=2)
 #(2)
 Studienfach <- sample(c("Statistik","Data Science","Mathe","Informatik"),100,
                       replace=TRUE, prob=c(0.35,0.35,0.1,0.2)) 
 #(3)
-Datensatz <- data.frame(Alter,Studienfach)
+Datensatz <- data.frame(ID,Alter,Studienfach)
 Datensatz$InteresseMathematik <- sample(1:7,100,replace=TRUE,prob=NULL)
 Datensatz$InteresseMathematik[Datensatz$Studienfach=='Mathe']<-6:7
 Datensatz$InteresseMathematik[Datensatz$Studienfach=='Data Science']<-5:6
